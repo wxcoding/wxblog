@@ -44,3 +44,5 @@ jobs:
           external_repository: wxcoding/wxcoding.github.io
           publish_branch: master
           publish_dir: ./dist
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
