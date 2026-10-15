@@ -44,6 +44,12 @@ const rssHref = getRelativeLocaleUrl(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web@1.522.0/lxgwwenkaiscreen/result.css"
+    />
+
     <!-- Font -->
     <Font
       cssVariable="--font-google-sans-code"
