@@ -4,14 +4,20 @@ import sharp from "sharp";
 import { fontData, experimental_getFontFileURL } from "astro:assets";
 import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
 import config from "@/config";
+import defaultOgImage from "@/assets/images/astropaper-og.jpg";
 
 export const GET: APIRoute = async context => {
-  const fonts = fontData["--font-google-sans-code"];
+  const fonts = fontData["--font-google-sans-code"] ?? [];
   const regularFontPath = getFontPathByWeight(fonts, 400);
   const boldFontPath = getFontPathByWeight(fonts, 700);
 
-  if (regularFontPath === undefined || boldFontPath === undefined) {
-    throw new Error("Cannot find the font path.");
+  if (!config.features.dynamicOgImage || !regularFontPath || !boldFontPath) {
+    const data = await fetch(new URL(defaultOgImage.src, "https://example.com")).then(res =>
+      res.arrayBuffer()
+    );
+    return new Response(data, {
+      headers: { "Content-Type": "image/jpeg" },
+    });
   }
 
   const [regularData, boldData] = await Promise.all([

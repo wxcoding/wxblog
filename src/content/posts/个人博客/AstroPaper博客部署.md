@@ -1,7 +1,7 @@
 ---
-author: 文星
+author: 悦辞
 pubDatetime: 2026-10-15T11:16:00+08:00
-title: GitHub Pages 部署 AstroPaper
+title: AstroPaper 博客部署
 slug: astropaper-github-pages-deployment
 featured: true
 draft: false

@@ -3,9 +3,9 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://wxcoding.github.io/",
-    title: "悦辞",
+    title: "YueCi",
     description: "一个极简、响应式且 SEO 友好的 Astro 博客。",
-    author: "文星",
+    author: "悦辞",
     profile: "https://satna.ing",
     ogImage: "default-og.jpg",
     lang: "zh",
@@ -19,7 +19,8 @@ export default defineAstroPaperConfig({
   },
   features: {
     lightAndDarkMode: true,
-    dynamicOgImage: true,
+    // Disable dynamic OG images in CI/deploy environments that cannot fetch Google Fonts.
+    dynamicOgImage: false,
     showArchives: true,
     showBackButton: true,
     editPost: {
