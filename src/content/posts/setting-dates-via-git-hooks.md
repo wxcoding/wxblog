@@ -4,7 +4,7 @@ pubDatetime: 2024-01-03T20:40:08Z
 modDatetime: 2024-01-08T18:59:05Z
 title: 使用 Git Hooks 自动设置创建和修改日期
 featured: false
-draft: false
+draft: true
 tags:
   - docs
   - FAQ

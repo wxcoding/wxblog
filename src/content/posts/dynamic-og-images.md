@@ -5,7 +5,7 @@ modDatetime: 2026-06-03T00:00:00.000Z
 title: 在 AstroPaper 博客文章中动态生成 OG 图片
 slug: dynamic-og-image-generation-in-astropaper-blog-posts
 featured: false
-draft: false
+draft: true
 tags:
   - docs
   - release

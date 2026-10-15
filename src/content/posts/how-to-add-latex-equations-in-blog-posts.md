@@ -3,6 +3,7 @@ author: Alberto Perdomo
 pubDatetime: 2024-09-08T20:58:52.737Z
 modDatetime: 2025-03-22T09:25:46.734Z
 title: 如何在 Astro 博客文章中添加 LaTeX 公式
+draft: true
 tags:
   - docs
 description: 学习如何在 Astro 博客文章中使用 Markdown、KaTeX 和 remark/rehype 插件添加 LaTeX 公式。
