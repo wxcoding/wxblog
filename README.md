@@ -7,31 +7,31 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
 
-AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).
+AstroPaper 是一个简洁、响应式、易访问且对 SEO 友好的 Astro 博客主题。本主题以[作者的个人博客](https://satnaing.dev/blog)为基础设计和制作。
 
-Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
+如需了解更多信息，请阅读[博客文章](https://astro-paper.pages.dev/posts/)或查看 README 中的[文档部分](#-文档)。
 
-## 🔥 Features
+## 🔥 功能特性
 
-- [x] type-safe markdown
-- [x] super fast performance
-- [x] accessible (Keyboard/VoiceOver)
-- [x] responsive (mobile ~ desktops)
-- [x] SEO-friendly
-- [x] light & dark mode
-- [x] static search ([Pagefind](https://pagefind.app/))
-- [x] draft posts & pagination
-- [x] sitemap & rss feed
-- [x] MDX support
-- [x] collapsible table of contents
-- [x] followed best practices
-- [x] highly customizable
-- [x] dynamic OG image generation for blog posts ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
-- [x] i18n ready
+- [x] 类型安全的 Markdown
+- [x] 加载速度快
+- [x] 易于访问（支持键盘操作和 VoiceOver）
+- [x] 响应式布局，适配手机到桌面设备
+- [x] 对 SEO 友好
+- [x] 支持浅色和深色模式
+- [x] 静态搜索（[Pagefind](https://pagefind.app/)）
+- [x] 支持草稿文章和分页
+- [x] 自动生成站点地图和 RSS 订阅
+- [x] 支持 MDX
+- [x] 支持可折叠目录
+- [x] 遵循最佳实践
+- [x] 高度可定制
+- [x] 为博客文章动态生成 OG 图片（[相关文章](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/)）
+- [x] 支持国际化
 
-_Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
+_说明：作者曾在 Mac 上使用 **VoiceOver**、在 Android 上使用 **TalkBack** 测试 AstroPaper 的屏幕阅读器辅助功能。由于无法测试所有屏幕阅读器，其他阅读器上的表现可能有所不同；主题中的辅助功能增强也应能在其他阅读器上正常工作。_
 
-## ✅ Lighthouse Score
+## ✅ Lighthouse 评分
 
 <p align="center">
   <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
@@ -39,9 +39,9 @@ _Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver**
   </a>
 </p>
 
-## 🚀 Project Structure
+## 🚀 项目结构
 
-Inside of AstroPaper, you'll see the following folders and files:
+AstroPaper 的目录和文件结构如下：
 
 ```bash
 /
@@ -58,7 +58,7 @@ Inside of AstroPaper, you'll see the following folders and files:
 │   │   ├── pages/
 │   │   │   └── about.md
 │   │   └── posts/
-│   │       └── some-blog-posts.md
+│   │       └── 博客文章.md
 │   ├── i18n/
 │   ├── layouts/
 │   ├── pages/
@@ -68,37 +68,51 @@ Inside of AstroPaper, you'll see the following folders and files:
 │   ├── utils/
 │   ├── config.ts
 │   └── content.config.ts
-├── astro-paper.config.ts  # user-defined configurations
+├── astro-paper.config.ts  # 用户自定义配置
 └── astro.config.ts
 ```
 
-All blog posts are stored in the `src/content/posts/` directory. You can organise posts into subdirectories — the subdirectory name becomes part of the post URL.
+所有博客文章都存放在 `src/content/posts/` 目录中。可以使用子目录整理文章；子目录名称也会成为文章 URL 的一部分。
 
-## 📖 Documentation
+如果已有 Markdown 或文本草稿，可以运行以下命令创建文章：
 
-Documentation can be read in two formats\_ _markdown_ & _blog post_.
+```bash
+pnpm new-post "文章标题" "草稿文件.md"
+```
 
-- Configuration - [markdown](src/content/posts/how-to-configure-astropaper-theme.md) | [blog post](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
-- Add Posts - [markdown](src/content/posts/adding-new-post.md) | [blog post](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
-- Customize Color Schemes - [markdown](src/content/posts/customizing-astropaper-theme-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
-- Predefined Color Schemes - [markdown](src/content/posts/predefined-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
+该命令会创建 Markdown 文章，并自动填写标题、当前发布日期，以及从草稿首个正文段落生成的描述。可以通过第三个可选参数指定相对于 `src/content/posts/` 的输出路径：
 
-## 💻 Tech Stack
+```bash
+pnpm new-post "文章标题" "草稿文件.md" "个人博客/我的文章"
+```
 
-**Main Framework** - [Astro](https://astro.build/)  
-**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [TailwindCSS](https://tailwindcss.com/)  
-**UI/UX** - [Figma Design File](https://www.figma.com/community/file/1356898632249991861)  
-**Static Search** - [Pagefind](https://pagefind.app/)  
-**Icons** - [Tablers](https://tabler-icons.io/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
-**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
-**Linting** - [ESLint](https://eslint.org)  
-**Dynamic OG images** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)
+草稿正文会复制到新文章中。该命令不会覆盖已有文章。作者使用站点默认值；`featured`、`draft` 和 `tags` 分别默认为 `false`、`false` 和 `others`。
 
-## 👨🏻‍💻 Running Locally
+## 📖 文档
 
-You can start using this project locally by running the following command in your desired directory:
+文档提供 Markdown 源文件和博客文章两种形式：
+
+- 配置主题：[Markdown](src/content/posts/how-to-configure-astropaper-theme.md) | [博客文章](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
+- 添加文章：[Markdown](src/content/posts/adding-new-post.md) | [博客文章](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
+- 自定义配色方案：[Markdown](src/content/posts/customizing-astropaper-theme-color-schemes.md) | [博客文章](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
+- 预设配色方案：[Markdown](src/content/posts/predefined-color-schemes.md) | [博客文章](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
+
+## 💻 技术栈
+
+**主要框架** - [Astro](https://astro.build/)  
+**类型检查** - [TypeScript](https://www.typescriptlang.org/)  
+**样式** - [TailwindCSS](https://tailwindcss.com/)  
+**UI/UX 设计** - [Figma 设计文件](https://www.figma.com/community/file/1356898632249991861)  
+**静态搜索** - [Pagefind](https://pagefind.app/)  
+**图标** - [Tablers](https://tabler-icons.io/)  
+**代码格式化** - [Prettier](https://prettier.io/)  
+**部署** - [Cloudflare Pages](https://pages.cloudflare.com/)  
+**代码检查** - [ESLint](https://eslint.org)  
+**动态 OG 图片** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)
+
+## 👨🏻‍💻 本地运行
+
+在目标目录中运行以下命令，创建本项目的副本：
 
 ```bash
 # pnpm
@@ -114,53 +128,53 @@ yarn create astro --template satnaing/astro-paper
 bun create astro@latest -- --template satnaing/astro-paper
 ```
 
-Then start the project by running the following commands:
+然后运行以下命令安装依赖并启动项目：
 
 ```bash
-# install dependencies if you haven't done so in the previous step.
+# 如果上一步尚未安装依赖，请先安装
 pnpm install
 
-# start running the project
+# 启动开发服务器
 pnpm dev
 ```
 
-## Google Site Verification (optional)
+## Google 站点验证（可选）
 
-You can add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) by setting `site.googleVerification` in `astro-paper.config.ts`:
+如需添加 [Google 站点验证 HTML 标签](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag)，可在 `astro-paper.config.ts` 中设置 `site.googleVerification`：
 
 ```ts file="astro-paper.config.ts"
 export default defineAstroPaperConfig({
   site: {
     // ...
-    googleVerification: "your-google-site-verification-value",
+    googleVerification: "你的 Google 站点验证值",
   },
   // ...
 });
 ```
 
-> See [this discussion](https://github.com/satnaing/astro-paper/discussions/334#discussioncomment-10139247) for adding AstroPaper to the Google Search Console.
+如何将 AstroPaper 添加到 Google Search Console，请参阅[这篇讨论](https://github.com/satnaing/astro-paper/discussions/334#discussioncomment-10139247)。
 
-## 🧞 Commands
+## 🧞 常用命令
 
-All commands are run from the root of the project, from a terminal:
+以下命令均需在项目根目录的终端中运行：
 
-| Command          | Action                                                                                                                           |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm install`   | Installs dependencies                                                                                                            |
-| `pnpm dev`       | Starts local dev server at `localhost:4321`                                                                                      |
-| `pnpm build`     | Type-checks, builds the site, runs Pagefind indexing, and copies the index to `public/pagefind/`                                 |
-| `pnpm preview`   | Preview your build locally, before deploying                                                                                     |
-| `pnpm sync`      | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check`                                                                                 |
+| 命令             | 说明                                                                                                           |
+| :--------------- | :------------------------------------------------------------------------------------------------------------- |
+| `pnpm install`   | 安装项目依赖                                                                                                   |
+| `pnpm dev`       | 在 `localhost:4321` 启动本地开发服务器                                                                         |
+| `pnpm build`     | 检查类型、构建网站、运行 Pagefind 索引，并将索引复制到 `public/pagefind/`                                      |
+| `pnpm preview`   | 部署前在本地预览构建结果                                                                                       |
+| `pnpm sync`      | 为 Astro 模块生成 TypeScript 类型。[了解更多](https://docs.astro.build/en/reference/cli-reference/#astro-sync) |
+| `pnpm astro ...` | 运行 Astro CLI 命令，例如 `astro add`、`astro check`                                                           |
 
-## ✨ Feedback & Suggestions
+## ✨ 反馈与建议
 
-If you have any suggestions/feedback, you can contact me via [my email](mailto:satnaingdev+astropaper@gmail.com). Alternatively, feel free to open an issue if you find bugs or want to request new features.
+如有建议或反馈，可通过[电子邮件](mailto:satnaingdev+astropaper@gmail.com)联系作者。如果发现问题或希望提出新功能，也欢迎创建 Issue。
 
-## 📜 License
+## 📜 许可证
 
-Licensed under the MIT License, Copyright © 2026
+本项目采用 MIT 许可证，版权所有 © 2026。
 
 ---
 
-Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+由 [Sat Naing](https://satnaing.dev) 👨🏻‍💻 与[贡献者](https://github.com/satnaing/astro-paper/graphs/contributors)用 🤍 制作。
