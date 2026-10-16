@@ -1,7 +1,7 @@
 ---
 author: guanwx
 pubDatetime: 2026-10-16T21:00:00+08:00
-title: 域名绑定 GitHub Pages 全流程
+title: 域名绑定 GitHub Pages 流程
 slug: github-pages-custom-domain
 featured: false
 draft: false

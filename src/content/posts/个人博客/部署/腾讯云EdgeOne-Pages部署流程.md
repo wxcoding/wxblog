@@ -1,5 +1,5 @@
 ---
-title: 腾讯云 EdgeOne Pages 部署静态博客全流程
+title: 腾讯云 EdgeOne Pages 部署静态博客流程
 author: guanwx
 pubDatetime: 2026-10-16T12:00:00+08:00
 slug: edgeone-pages-deploy-guide
