@@ -1,5 +1,5 @@
 ---
-author: 悦辞
+author: guanwx
 pubDatetime: 2021-9-12T13:44:00+08:00
 title: Git 常用命令速查手册
 slug: Git 常用命令速查手册

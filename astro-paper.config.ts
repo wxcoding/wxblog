@@ -3,9 +3,9 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://guanwx.me/",
-    title: "YueCi",
+    title: "Guanwx",
     description: "一个极简、响应式且 SEO 友好的 Astro 博客。",
-    author: "悦辞",
+    author: "guanwx",
     profile: "https://satna.ing",
     ogImage: "default-og.jpg",
     lang: "zh",

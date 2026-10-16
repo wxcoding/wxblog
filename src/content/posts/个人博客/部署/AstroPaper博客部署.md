@@ -1,5 +1,5 @@
 ---
-author: 悦辞
+author: guanwx
 pubDatetime: 2026-10-15T11:16:00+08:00
 title: AstroPaper 博客部署
 slug: astropaper-github-pages-deployment
