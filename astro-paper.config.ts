@@ -20,7 +20,7 @@ export default defineAstroPaperConfig({
   features: {
     lightAndDarkMode: true,
     // Disable dynamic OG images in CI/deploy environments that cannot fetch Google Fonts.
-    dynamicOgImage: false,
+    dynamicOgImage: true,
     showArchives: true,
     showBackButton: true,
     editPost: {
