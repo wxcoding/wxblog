@@ -13,6 +13,9 @@ export interface UIStrings {
     sharePostIntro: string;
     sharePostOn: string;
     sharePostViaEmail: string;
+    wechatScanTitle: string;
+    wechatScanTip: string;
+    copied: string;
     tagLabel: string;
     backToTop: string;
     goBack: string;
