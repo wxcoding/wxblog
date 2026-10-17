@@ -1,15 +1,6 @@
 # AstroPaper 📄
 
-![AstroPaper](public/default-og.jpg)
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/1356898632249991861)
-![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
-
-AstroPaper 是一个简洁、响应式、易访问且对 SEO 友好的 Astro 博客主题。本主题以[作者的个人博客](https://satnaing.dev/blog)为基础设计和制作。
-
-如需了解更多信息，请阅读[博客文章](https://astro-paper.pages.dev/posts/)或查看 README 中的[文档部分](#-文档)。
+AstroPaper 是一个简洁、响应式、易访问且对 SEO 友好的 Astro 博客主题。
 
 ## 🔥 功能特性
 
@@ -30,14 +21,6 @@ AstroPaper 是一个简洁、响应式、易访问且对 SEO 友好的 Astro 博
 - [x] 支持国际化
 
 _说明：作者曾在 Mac 上使用 **VoiceOver**、在 Android 上使用 **TalkBack** 测试 AstroPaper 的屏幕阅读器辅助功能。由于无法测试所有屏幕阅读器，其他阅读器上的表现可能有所不同；主题中的辅助功能增强也应能在其他阅读器上正常工作。_
-
-## ✅ Lighthouse 评分
-
-<p align="center">
-  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-  </a>
-</p>
 
 ## 🚀 项目结构
 
@@ -166,15 +149,3 @@ export default defineAstroPaperConfig({
 | `pnpm preview`   | 部署前在本地预览构建结果                                                                                       |
 | `pnpm sync`      | 为 Astro 模块生成 TypeScript 类型。[了解更多](https://docs.astro.build/en/reference/cli-reference/#astro-sync) |
 | `pnpm astro ...` | 运行 Astro CLI 命令，例如 `astro add`、`astro check`                                                           |
-
-## ✨ 反馈与建议
-
-如有建议或反馈，可通过[电子邮件](mailto:satnaingdev+astropaper@gmail.com)联系作者。如果发现问题或希望提出新功能，也欢迎创建 Issue。
-
-## 📜 许可证
-
-本项目采用 MIT 许可证，版权所有 © 2026。
-
----
-
-由 [Sat Naing](https://satnaing.dev) 👨🏻‍💻 与[贡献者](https://github.com/satnaing/astro-paper/graphs/contributors)用 🤍 制作。
