@@ -59,9 +59,11 @@ const uid = `wechat-modal-${Math.random().toString(36).slice(2, 8)}`;
         btn.dataset.wechatBound = "1";
         btn.addEventListener("click", () => {
           const id = btn.getAttribute("aria-controls");
-          const dlg = id
-            ? document.getElementById(id)
-            : btn.parentElement?.querySelector("dialog");
+          const dlg = (
+            id
+              ? document.getElementById(id)
+              : btn.parentElement?.querySelector("dialog")
+          ) as HTMLDialogElement | null;
           dlg?.showModal();
         });
       });
