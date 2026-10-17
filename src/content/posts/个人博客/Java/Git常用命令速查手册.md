@@ -10,7 +10,7 @@ tags:
   - AstroPaper
   - GitHub Pages
   - 部署
-description: Git 常用命令速查手册。
+description: 按配置、提交、分支、远程、回退、撤销、储藏、标签等场景分类整理 Git 常用命令。
 ---
 
 ## 一、基础配置
